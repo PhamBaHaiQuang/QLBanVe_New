@@ -26,3 +26,6 @@ C:\Users\Quang\Downloads\Downloads\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.Propert
 C:\Users\Quang\Downloads\Downloads\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.Quan_Ly_Ban_Ve.resources
 C:\Users\Quang\Downloads\Downloads\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.Thong_Tin_Ve.resources
 C:\Users\Quang\Downloads\Downloads\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.csproj.GenerateResource.Cache
+C:\Users\Oanh\Desktop\Oanhnguyen\QLBanVe_New\QLBanVe\QLBanVe\bin\Debug\QLBanVe.exe.config
+C:\Users\Oanh\Desktop\Oanhnguyen\QLBanVe_New\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.exe
+C:\Users\Oanh\Desktop\Oanhnguyen\QLBanVe_New\QLBanVe\QLBanVe\obj\x86\Debug\QLBanVe.pdb

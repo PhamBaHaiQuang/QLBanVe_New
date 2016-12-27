@@ -13,6 +13,8 @@ namespace QLBanVe
 {
     public partial class Lay_Ve_Online : Form
     {
+        public delegate void SendMessage(string Message);
+        public SendMessage Sender;
 
         public Lay_Ve_Online()
         {

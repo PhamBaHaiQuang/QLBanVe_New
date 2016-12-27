@@ -40,12 +40,48 @@ namespace QLBanVe
 
         private void btKiemTra_Click(object sender, EventArgs e)
         {
-
+            if (txtDienThoai.Text != "")
+            {
+                string cnStr;
+                SqlConnection cn;
+                cnStr = @"Data Source = .; Initial Catalog = QLBanVe; Integrated Security = True";
+                try
+                {
+                    cn = new SqlConnection(cnStr);
+                    cn.Open();
+                    string query = "SELECT Count(*) FROM DangKyOnline WHERE DienThoai = @dienthoai";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add(new SqlParameter("@dienthoai", txtDienThoai.Text));
+                    int x = (int)cmd.ExecuteScalar();
+                    if (x == 1)
+                    {
+                        lbThongBao.Text = "";
+                        MessageBox.Show("Số điện thoại chính xác.", "Thông báo.");
+                        this.Hide();
+                        Lay_Ve_Online lvo = new Lay_Ve_Online(); // goi form lay ve online 
+                        lvo.Sender(txtDienThoai.Text); // chuyen du lieu tu txt qua lable cua form lay ve online theo phuong thuc delegate
+                        this.Hide();
+                        lvo.Show();
+                    }
+                    else
+                    {
+                        lbThongBao.Text = "Số điện thoại không chính xác!";
+                        txtDienThoai.Text = "";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e) //Chi cho nhap so tu ban phim
         {
-
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
